@@ -973,6 +973,7 @@ if (!('reaction' in chat)) chat.reaction = false
 if (!('viewonce' in chat)) chat.viewonce = true       
 if (!('modoadmin' in chat)) chat.modoadmin = false           
 if (!('antitoxic' in chat)) chat.antitoxic = false
+if (!('game' in chat)) chat.game = true
 if (!('simi' in chat)) chat.simi = false
 if (!('antiTraba' in chat)) chat.antiTraba = false
 if (!('autolevelup' in chat))  chat.autolevelup = false
@@ -1005,6 +1006,7 @@ reaction: false,
 viewonce: true,
 modoadmin: false,
 antitoxic: false,
+game: true,
 simi: false,
 antiTraba: false,
 autolevelup: false,
