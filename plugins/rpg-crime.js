@@ -1,7 +1,7 @@
 //CÓDIGO CREADO POR elrebelde21 : https://github.com/elrebelde21
 const handler = async (m, {conn, isPrems}) => {
-const date = global.db.data.users[m.sender].crime + 10800000; //3600000 = 3 hs
-if (new Date - global.db.data.users[m.sender].crime < 10800000) return m.reply(`『🚓︎』𝙇𝘼 𝙋𝙊𝙇𝙄𝘾𝙄𝘼 𝙀𝙎𝙏𝘼 𝙑𝙄𝙂𝙄𝙇𝘼𝙉𝘿𝙊 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙈𝙊𝙈𝙀𝙉𝙏𝙊, 𝙑𝙐𝙀𝙇𝙑𝙀 𝙀𝙉 : ${msToTime(date - new Date())}`)
+const date = global.db.data.users[m.sender].crime + 1800000; //1800000 = 30 mins
+if (new Date - global.db.data.users[m.sender].crime < 1800000) return m.reply(`『🚓︎』𝙇𝘼 𝙋𝙊𝙇𝙄𝘾𝙄𝘼 𝙀𝙎𝙏𝘼 𝙑𝙄𝙂𝙄𝙇𝘼𝙉𝘿𝙊 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙈𝙊𝙈𝙀𝙉𝙏𝙊, 𝙑𝙐𝙀𝙇𝙑𝙀 𝙀𝙉 : ${msToTime(date - new Date())}`)
 const exp = Math.floor(Math.random() * 10000)
 const diamond = Math.floor(Math.random() * 300)
 const money = Math.floor(Math.random() * 10000)
