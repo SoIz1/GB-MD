@@ -19,6 +19,5 @@ else throw '╰⊱❗️⊱ *𝙇𝙊 𝙐𝙎𝙊́ 𝙈𝘼𝙇 | 𝙐𝙎𝙀
 }}
 handler.help = ['wm <packname>|<author>']
 handler.tags = ['sticker']
-modoadmin = false
 handler.command = /^robar|wm$/i
 export default handler
