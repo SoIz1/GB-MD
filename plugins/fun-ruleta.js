@@ -20,11 +20,8 @@ if (ruleta === 'text6') return m.reply(`👑 𝙂𝙐𝘼𝘼 𝙀𝙎𝙏𝘼�
 }
 // Actualiza el tiempo de reutilización
     global.db.data.users[m.sender].juegos = new Date();
-  } else if (m.content === ".skip") {
-    global.db.data.users[m.sender].juegos = new Date();
-    m.reply(`Has usado el comando .skip. Tu tiempo de reutilización ahora es 0.`);
-  }
-});
+   else if (m.content === ".skip") 
+
 handler.help = ['game'];
 handler.tags = ['xp'];
 handler.command = /^(ruletas|ruleta|suerte)$/i
