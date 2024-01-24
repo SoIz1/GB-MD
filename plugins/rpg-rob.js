@@ -20,6 +20,8 @@ global.db.data.users[m.sender].lastrob = new Date * 1
 handler.help = ['rob']
 handler.tags = ['econ']
 handler.command = ['robar', 'rob']
+handler.group = true
+handler.register = true
 export default handler  
 function msToTime(duration) {
 var milliseconds = parseInt((duration % 1000) / 100),
@@ -30,4 +32,3 @@ hours = (hours < 10) ? "0" + hours : hours
 minutes = (minutes < 10) ? "0" + minutes : minutes
 seconds = (seconds < 10) ? "0" + seconds : seconds
 return hours + " Hora(s) " + minutes + " Minuto(s)"}
-
