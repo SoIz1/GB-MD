@@ -1,3 +1,4 @@
+// Acepta Gata...
 import { sticker } from '../lib/sticker.js'
 
 let handler = m => m
@@ -11,20 +12,20 @@ let stiker = false
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp/g.test(mime)) return
 
-// Extrae el autor y el paquete del texto del mensaje
-let customAuthor = author;
-let customPackname = packname;
+// Obtiene autor y paquete del texto en el mensaje
+let customAuthor = author
+let customPackname = packname
 if (m.text && m.text.includes('|')) {
-const parts = m.text.split('|').map(p => p.trim());
+const parts = m.text.split('|').map(p => p.trim())
 if (parts.length === 2) {
-customAuthor = parts[0] || author;
-customPackname = parts[1] || packname;
+customAuthor = parts[0] || author
+customPackname = parts[1] || packname
 }}
 
 if (/image/g.test(mime)) {
 let img = await q.download?.()
 if (!img) return
-// Usa las variables personalizadas de autor y paquete
+// Usa los nombres asignados del mensaje 
 stiker = await sticker(img, false, customAuthor, customPackname)
 } else if (/video/g.test(mime)) {
 if (/video/g.test(mime)) {
@@ -33,11 +34,9 @@ return await m.reply(lenguajeGB.smsAutoStik())
 }}
 let img = await q.download()
 if (!img) return
-// Usa las variables personalizadas de autor y paquete
 stiker = await sticker(img, false, customAuthor, customPackname)
 } else if (m.text.split(/\n| /i)[0]) {
 if (isUrl(m.text)) {
-// Usa las variables personalizadas de autor y paquete
 stiker = await sticker(false, m.text.split(/\n| /i)[0], customAuthor, customPackname)
 } else {
 return
